@@ -1,18 +1,86 @@
-# Título do projeto
+# ETAPA 4 AC1
 
-Um parágrafo da descrição do projeto vai aqui
+Criei um produto e seus atributos com base no enunciado
 
-## 🚀 Começando
+### 📋 Códigos
 
-Pode colocar o enunciado para o desenvolvimento do projeto
+public class Produto{
+    private String nome;
+    private double precoCusto;
+    private double precoVenda;
+    private String dataFabricacao;
+    private String dataValidade;
 
-### 📋 Pré-requisitos
+  
+    public Produto(String nome, double precoCusto, String dataFabricacao, String dataValidade) {  //Usei o metodo construtor que recebe todos os atributos por parâmetro; Construtor que recebe apenas nome e preço de custo; O preço de venda será 10% a mais sobre o preço de custo; E a data de validade será 1 mês após a data de fabricação
+        this.nome = nome;
+        this.precoCusto = precoCusto;
+        this.precoVenda = precoCusto * 1.10;
+        this.dataFabricacao = dataFabricacao;
+        this.dataValidade = dataValidade;
+    }
 
-De que coisas você precisa para instalar o software e como instalá-lo?
 
-```
-Dar exemplos
-```
+
+	public String getNome() {     //Utilizei o metodo getters e setters para acessar e modificar os atributos de forma mais controlada
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public double getPrecoCusto() {
+        return precoCusto;
+    }
+
+    public void setPrecoCusto(double precoCusto) {
+        this.precoCusto = precoCusto;
+    }
+
+    public double getPrecoVenda() {
+        return precoVenda;
+    }
+
+    public void setPrecoVenda(double precoVenda) {
+        this.precoVenda = precoVenda;
+    }
+
+    public String getDataFabricacao() {
+        return dataFabricacao;
+    }
+
+    public void setDataFabricacao(String dataFabricacao) {
+        this.dataFabricacao = dataFabricacao;
+    }
+
+    public String getDataValidade() {
+        return dataValidade;
+    }
+
+    public void setDataValidade(String dataValidade) {
+        this.dataValidade = dataValidade;
+    }
+    
+    String descricao()  { //Na terceira etapa eu criei o retorno que vai ser o visual do código quando ele for gerado pelo aplicativo 
+        return
+            "Nome: " + this.nome + "\n" +
+            "Preço de Custo: " + this.precoCusto+ "\n" +
+            "Preço de Venda: " + this.precoVenda + "\n" +
+            "Data de Fabricação: " + this.dataFabricacao + "\n" +
+            "Data de validade: " + this.dataValidade + "\n";
+
+
+
+     }
+     public static void main (String[]args) {  //Por último criei o produto e pedi para o aplicativo printar para rodar
+         Produto p1 = new Produto( "Bolo de Aniversário Personalizado do Todo Podero Timão", 89 , "9/11/2024", "09/12/2024");
+      
+         System.out.println(p1.descricao());
+  
+}
+} 
+
 
 ### 🔧 Instalação
 
@@ -31,5 +99,5 @@ Ferramentas utilizadas e bibliotecas
 
 ## ✒️ Autores
 
-* **Nome do desenvolvedor** - *Trabalho Inicial* - Nome da atividade
+João Carlos Ferreira de Araujo RA 248152 -- AC1 de Programação Orientada à Objetos
 
